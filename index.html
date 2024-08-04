@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	/* resize the image(s) on page load */
+	$(document).ready(function() {
+		resize_all_parallax();
+	});
+
+	/* resize the image(s) on page resize */
+	$(window).on('resize', function(){
+		resize_all_parallax();
+	});
+
+	/* keep all of your resize function calls in one place so you don't have to edit them twice (on page load and resize) */
+	function resize_all_parallax() {
+		var div_id = 'img1'; /* the ID of the div that you're resizing */
+		var img_w = 1000; /* the width of your image, in pixels */
+		var img_h = 864; /* the height of your image, in pixels */
+		resize_parallax(div_id,img_w,img_h);
+	}
+
+	/* this resizes the parallax image down to an appropriate size for the viewport */
+	function resize_parallax(div_id,img_w,img_h) {
+		var div = $('#' + div_id);
+		var divwidth = div.width();
+		if (divwidth < 769) { var pct = (img_h/img_w) * 105; } /* show full image, plus a little padding, if on static mobile view */
+		else { var pct = 60; } /* this is the HEIGHT as percentage of the current div WIDTH. you can change it to show more (or less) of your image */
+		var newheight = Math.round(divwidth * (pct/100));
+		newheight = newheight  + 'px';
+		div.height(newheight);
+	}
+</script>
+   <style type="text/css">
+.parallax_img {
+    height: 500px;
+    background-image: url(bg4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+@media screen and (max-width: 768px) {
+	.parallax_img {
+		background-attachment: inherit;
+	}
+}
+
+       .parallax_img2 {
+    height: 500px;
+    background-image: url(bg5.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+@media screen and (max-width: 768px) {
+	.parallax_img2 {
+		background-attachment: inherit;
+	}
+}
+       
+       .parallax_img3 {
+    height: 500px;
+    background-image: url(bg6.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+@media screen and (max-width: 768px) {
+	.parallax_img3 {
+		background-attachment: inherit;
+	}
+}
+       
+       body {
+           background-color: darkgray;
+           
+       }     
+       
+</style>
+</head>
+<body>
+
+
+<br>
+<div style="border-radius: 20px" class="container p-5 bg-dark text-white text-center">
+  <h1>Psalm 1 New International Version</h1>
+  <p>Blessed is the one who does not walk in step with the wicked or stand in the way that sinners take or sit in the company of mockers,</p> 
+</div>
+  
+<div class="container mt-5" style="background-color: #fff;">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Verses 1-3</h3>
+      <p style="font-size: 2em;">
+    1 Blessed is the one
+        who does not walk in step with the wicked
+    or stand in the way that sinners take
+        or sit in the company of mockers,
+    2 but whose delight is in the law of the Lord,
+        and who meditates on his law day and night.
+    3 That person is like a tree planted by streams of water,
+        which yields its fruit in season
+    and whose leaf does not wither—
+        whatever they do prospers.
+
+   </p>
+      
+    </div>
+    <div class="col-sm-6">
+      <h3>Verses 4-6</h3>
+      <p style="font-size: 2em;"> 
+       4 Not so the wicked!
+        They are like chaff
+        that the wind blows away.
+    5 Therefore the wicked will not stand in the judgment,
+        nor sinners in the assembly of the righteous.
+
+    6 For the Lord watches over the way of the righteous,
+        but the way of the wicked leads to destruction.</p>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- first parallax-->
+<div class="parallax_img" id="img3"></div>
+
+
+<div class="container p-5 bg-dark text-white text-center">
+  <h1> Describes Yahweh as the King of creation who made dependent humans his royal partners.</h1>
+  <p>what is a human being that you are mindful of him, / a son of man that you care for him?</p> 
+</div>
+  
+<div class="container mt-5"  style="background-color: #fff;">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Verses 1-4</h3>
+      <p>
+    Lord, our Lord,how majestic is your name in all the earth!
+    You have set your glory
+        in the heavens.
+    2 Through the praise of children and infants
+        you have established a stronghold against your enemies,
+        to silence the foe and the avenger.
+    3 When I consider your heavens,
+        the work of your fingers,
+    the moon and the stars,
+        which you have set in place,
+    4 what is mankind that you are mindful of them,
+        human beings that you care for them?</p>
+      
+    </div>
+    <div class="col-sm-6">
+      <h3>Verses 6-9</h3>
+      <p>
+          5 You have made them[d] a little lower than the angels[e]
+        and crowned them[f] with glory and honor.
+    6 You made them rulers over the works of your hands;
+        you put everything under their[g] feet:
+    7 all flocks and herds,
+        and the animals of the wild,
+    8 the birds in the sky, and the fish in the sea, all that swim the paths of the seas.
+
+    9 Lord, our Lord, how majestic is your name in all the earth!</p>
+      
+    </div>
+    
+  </div>
+</div>
+
+<!-- =============== second parallax ===================  -->
+<div class="parallax_img2" id="img2"></div>
+
+<div class="container p-5 bg-dark text-white text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container mt-5"  style="background-color: #fff;">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+<!-- =============== Third paralax  ===================  -->
+<div class="parallax_img3" id="img3"></div>
+<div class="container p-5 bg-dark text-white text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container mt-5"  style="background-color: #fff;">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Copyright -->
+   <footer>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.8)">
+         
+        <b style="color: #fff;"> &copy; 2024 Copyright:</b>
+      <p class="text-white">Design by Evangelist Stephen Jolayemi</p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+</body>
+</html>
